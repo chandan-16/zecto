@@ -5,16 +5,16 @@ import ProductCard from "./ProductCard";
 const HomeScreen = () => {
 
     const [productList, setProductList] = useState(productData);
-    console.log("productData ----->", productList)
 
   return (
-    <>
+    <div className="px-10 flex flex-wrap mx-auto">
+        <h2 className="w-full text-3xl tracking-widest font-semibold">LATEST PRODUCTS</h2>
     {
       productList.map((product) => (
         <ProductCard key={product["_id"]} product={product} />
       ))
     }
-    </>
+    </div>
   )
 }
 
